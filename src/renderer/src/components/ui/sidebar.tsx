@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+/* eslint-disable max-lines-per-function */
 import { cva, type VariantProps } from 'class-variance-authority'
 import { PanelLeftIcon } from 'lucide-react'
 import { Slot } from 'radix-ui'
@@ -93,7 +95,7 @@ function SidebarProvider({
 
   // Adds a keyboard shortcut to toggle the sidebar.
   React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    function handleKeyDown(event: KeyboardEvent) {
       if (
         event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
         (event.metaKey || event.ctrlKey)
@@ -525,6 +527,7 @@ function SidebarMenuButton({
   }
 
   if (typeof tooltip === 'string') {
+    // eslint-disable-next-line no-param-reassign
     tooltip = {
       children: tooltip,
     }

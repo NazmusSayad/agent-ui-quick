@@ -1,5 +1,3 @@
-import electronLogo from './assets/electron.svg'
-
 export function App() {
   function ipcHandle(): void {
     return window.electron.ipcRenderer.send('ping')
@@ -7,7 +5,6 @@ export function App() {
 
   return (
     <>
-      <img alt="logo" className="logo" src={electronLogo} />
       <div className="creator">Powered by electron-vite</div>
       <div className="text">
         Build an Electron app with <span className="react">React</span>
